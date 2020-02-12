@@ -1,0 +1,67 @@
+# Goals
+1. ML(Machine Learning)의 기본적인 이해
+- Linear regression, Logistic refression(classivication)
+- Deep Learing: Neural networks, Convolutional Neural Network, Recurrent Neural Network
+2. ML tool을 이용해 문제 해결
+- Tensorflow and Python
+
+
+1. ML은 무엇인가?
+: 머신러닝(기계학습), AI(인공지능)를 가능하게 하는 핵심 기술으로 기계 스스로 학습해 사람이 할 수 있는(없는) 작업을 빠른 속도로 수행
+
+- Limitation of explict programming: 탐색 프로그래밍의 제한
+    - spam filter: many rules
+    - Automatic driving(자동운전차): too many rules
+- ML: 자동적으로 학습하면 어떨까?
+
+2. 학습하는 방법에 따라 Supervised/Unsupervised learning로 나뉜다.
+- Supervised(감독하는) learning
+    - learning with labeled examples(정해져 있는 데이터, 라젤을 붙여줄 수 있다.)=> training set
+    - ex. 이미지를 주면 고양이인지, 강아지인지 구분
+          고양이 그림을 모아서 라벨을 달아줌
+- Unsupervised learning
+    - un-labeled data(라벨을 일일히 달아주기 어려움)
+    - ex. goole news grouping: 자동적으로 유사한 것끼리 모아줌
+          word clustering
+          
+# Supervised learning
+- Most common problem type in ML(일반적인 문제)
+    - Image labeling
+    - Email spam filter: 이미 어떤 것이 스팸이고 아닌지 라벨을 붙여놓은 것을 학습
+    - Predicting exam score: 이전의 얼마나 공부하고 성적을 받았는지 학생들의 데이터를 학습
+
+3. Training  data set
+: ml(이라는 하나의 모델)이 있고
+Label(값)이 정해져있는 y와 값의 특징(피츠)인 x 데이터를 갖고 학습
+이때 모르는 x가 있다면 ML에 넣는다.
+    - ex. aplhago
+    
+# Types of supervised learning
+    - Predicting final exam score(0-100): 시험성적예측
+         - regression
+- Pass/non pass: 두가지 pass와 non-pass로 예측
+           - binary classification(2가지 분류)
+- Latter grad(A,B,C,D,E,F)
+           - multi-label classification(여러가지 분류)
+       
+# 예제
+- ex. predicting final exam score
+    x(hour)   y(score)
+       10        90
+       9         80    -> train -> regression(모델)
+       3         50
+       2         30
+
+- ex. pass/non pass
+    x(hour)   y(score)
+       10        P
+       9         P      -> train -> binary classification(모델)
+       3         F
+       2         F
+
+- ex. pass/non pass
+    x(hour)   y(score)
+       10        A
+       9         B      -> train -> multi-label classification(모델)
+       3         D
+       2         F
